@@ -28,7 +28,7 @@ def create_socket():
         global host
         global port
         global s  # for socket variable
-        host = "" # If the server is hosted somewhere on internet then that IP will be given here
+        host = ""
         port = 9999
         s = socket.socket()
     except socket.error as msg:
