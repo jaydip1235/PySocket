@@ -92,6 +92,7 @@ def start_JDPrompt():
 
         elif cmd == 'quit':
             print("...Thank you for using 😀...")
+            exit(1)
         else:
             print("Command not found")
 
