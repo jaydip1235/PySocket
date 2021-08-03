@@ -87,8 +87,9 @@ def start_JDPrompt():
 
         elif 'select' in cmd: # select 0 command(will select 0th client) , select 1 command(will select 1st client) and so on
             conn, target = get_target(cmd)
-            if conn is not None: #If the connection is successful
+            if conn is not None and target is not None: #If the connection is successful
                 send_target_commands(conn, target)
+
         elif cmd == 'quit':
             print("...Thank you for using 😀...")
         else:
@@ -125,7 +126,7 @@ def get_target(cmd):
         return conn, target
     except:
         print("Selection not valid")
-        return None
+        return None,None
 
 
 def send_target_commands(conn, target):
